@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planiranje izleta</title>
+</head>
+<body>
+    <h1>Planiranje izleta</h1>
+    <p>Program za izračun troškova ulaznica za izlet.</p>
+
+    <script>
+   
+        let ime = prompt("Unesi svoje ime:");
+        let cijenaUlaznice = Number(prompt("Unesi cijenu jedne ulaznice:"));
+        let brojUlaznica = Number(prompt("Unesi broj ulaznica:"));
+        let ticketToMoon = Number(prompt("Unesi raspoloživi budžet:"));
+
+        // Svoj
+        let ukupniTrosak = cijenaUlaznice * brojUlaznica;
+        let preostaliIznos = ticketToMoon - ukupniTrosak;
+        let dovoljnoNovca = ticketToMoon >= ukupniTrosak;
+        let tocanIznos = ticketToMoon === ukupniTrosak;
+        let nastavakPlaniranja = confirm("Želiš li nastaviti s planiranjem izleta?");
+
+      
+        alert(
+            "Ime: " + ime +
+            "\nUkupni trosak: " + ukupniTrosak + " EUR" +
+            "\nPreostali iznos: " + preostaliIznos + " EUR" +
+            "\nDovoljno novca: " + dovoljnoNovca +
+            "\nTocan iznos: " + tocanIznos +
+            "\nNastavak planiranja: " + nastavakPlaniranja
+        );
+    </script>
+</body>
+</html>
